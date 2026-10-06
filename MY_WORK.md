@@ -129,29 +129,29 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [sep 27,2026 3:19 pm]
+**What I did**: update student id to my id number
 
-**Details**:
+**Details**: i went to line 150 &  edited the virtual id to mine
 
-**Challenges**:
+**Challenges**: there is no challenges in this step
 
-**Solution**:
+**Solution**: the output of code contain my id when i running the program
 
-**Time spent**:
+**Time spent**: 20 minutes
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [oct 6, 2026 11:29pm]
+**What I did**: add priority attribute to process class
 
-**Details**:
+**Details**: i made an attribute called priority in process class that have random value creates in constructor, i created get method for priority attribute and i call it in print step
 
-**Challenges**:
+**Challenges**: find the correct place to do each changes, rewrite the print sentence to new one with priority 
 
 **Solution**:
 
-**Time spent**:
+**Time spent**: 30 minutes
 
 ---
 
