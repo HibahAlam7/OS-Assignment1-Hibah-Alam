@@ -29,10 +29,10 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Hibah Seralkhatem Mohammed Alam] |
-| **Student ID** | [446052687] |
-| **University Email** | [446052687]@std.psau.edu.sa |
-| **GitHub Username** | [HibahAlam7] |
+| **Full Name** | Hibah Seralkhatem Mohammed Alam |
+| **Student ID** | 446052687 |
+| **University Email** | 446052687@std.psau.edu.sa |
+| **GitHub Username** | HibahAlam7 |
 | **Repository Link** | [Paste your repository link here] |
  
 ---
