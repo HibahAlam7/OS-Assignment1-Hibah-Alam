@@ -237,7 +237,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+Multithreading is a powerful technique used to increase system responsiveness by breaking tasks into smaller components that execute concurrently. In Java, a thread can be created by implementing the ⁠Runnable⁠ interface or extending the ⁠Thread⁠ class, and it is activated using the ⁠Thread.start()⁠ method. To simulate long-running tasks during execution, we use ⁠Thread.sleep()⁠ to pause the thread for a specified duration. Additionally, the ⁠Thread.join()⁠ method ensures that the main execution waits until a specific background thread completes its task. What surprised me the most was how multithreading dramatically speeds up performance while requiring careful handling to avoid execution conflicts. This experience showed me how modern software efficiently handles multiple background operations at once.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -261,7 +261,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+Multithreading is essential in real-world applications to ensure responsiveness and efficient resource management. For instance, in a web browser, one thread handles user interface interactions like clicking buttons while other background threads fetch web pages or load images simultaneously. Similarly, in a video game, separate threads are responsible for rendering graphics, calculating physics, and playing sound effects without causing lag. In a mobile music player app, a background thread plays audio continually while the main UI thread allows users to search or scroll through playlists. By applying these concepts, we can separate heavy or blocking tasks from the main execution thread. This prevents the application's user interface from freezing and greatly improves the overall user experience, much like the background processing logic implemented in our project.
 
 ### Optional: What would you like to learn more about?
 
