@@ -130,7 +130,7 @@
 ## Your Development Log
 
 ### Entry 1 - [sep 27,2026 3:19 pm]
-**What I did**: update student id to my id number
+**What I did**: Forked the repository & update student id to my id number
 
 **Details**: i went to line 150 &  edited the virtual id to mine
 
