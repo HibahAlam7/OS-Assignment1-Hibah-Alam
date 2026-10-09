@@ -149,13 +149,13 @@
 
 **Challenges**: find the correct place to do each changes, rewrite the print sentence to new one with priority 
 
-**Solution**:
+**Solution**:Declared a priority attribute in the Process class constructor, initialized it with a random value between 1 and 10, and updated the queue print statements to display the priority value alongside the process details.
 
 **Time spent**: 30 minutes
 
 ---
 
-### Entry 3 - [Date and Time]
+### Entry 3 - [oct 7, 2026 7:05 pm]
 **What I did**: Implemented a context switch counter to track and display the total number of CPU context switches during the simulation.
 
 **Details**:Added a contextSwitchCount variable that increments every time a process is dequeued from the ready queue and scheduled on the CPU, with its final total printed at the end of the simulation.
