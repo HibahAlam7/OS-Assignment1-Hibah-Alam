@@ -156,15 +156,15 @@
 ---
 
 ### Entry 3 - [Date and Time]
-**What I did**:
+**What I did**: Implemented a context switch counter to track and display the total number of CPU context switches during the simulation.
 
-**Details**:
+**Details**:Added a contextSwitchCount variable that increments every time a process is dequeued from the ready queue and scheduled on the CPU, with its final total printed at the end of the simulation.
 
-**Challenges**:
+**Challenges**:Ensuring the counter accurately increments for every scheduling switch without counting duplicate process allocations or getting lost across thread states.
 
-**Solution**:
+**Solution**:Placed the increment statement right inside the main scheduling loop where threads are popped and executed.
 
-**Time spent**:
+**Time spent**: 30 minutes
 
 ---
 
