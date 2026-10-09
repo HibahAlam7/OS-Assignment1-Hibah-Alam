@@ -1,5 +1,5 @@
 
-package schedulersimulation;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Map;
@@ -31,6 +31,9 @@ class Process implements Runnable {
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
     private int priority; // priority
+    private long creationTime;
+    private long lastQueuedTime;
+    private long totalWaitingTime = 0;
 
     // Constructor to initialize the process with name, burst time, and time quantum
     public Process(String name, int burstTime, int timeQuantum) {
@@ -143,7 +146,21 @@ class Process implements Runnable {
     public int getPriority() {
     return priority;
 }
+public void setLastQueuedTime(long time) {
+    this.lastQueuedTime = time;
+}
 
+public void addWaitingTime(long time) {
+    this.totalWaitingTime += time;
+}
+
+public long getTotalWaitingTime() {
+    return totalWaitingTime;
+}
+
+public long getLastQueuedTime() {
+    return lastQueuedTime;
+}
     // Check if the process has finished (i.e., no remaining time)
     public boolean isFinished() {
         return remainingTime <= 0;
@@ -226,7 +243,9 @@ public static void main(String[] args) {
         while (!processQueue.isEmpty()) {
             // Get the next thread from the queue (FIFO)
             Thread currentThread = processQueue.poll(); // Dequeues the next thread
-            
+            Process currentProcess = processMap.get(currentThread);
+        long waitDuration = System.currentTimeMillis() - currentProcess.getLastQueuedTime();
+        currentProcess.addWaitingTime(waitDuration);
             // Print the current process queue (list of process IDs in the queue)
             System.out.println(Colors.BOLD + Colors.MAGENTA + "┌─ Ready Queue " + "─".repeat(65) + Colors.RESET);
             System.out.print(Colors.MAGENTA + "│ " + Colors.RESET + Colors.BRIGHT_WHITE + "[" + Colors.RESET);
@@ -289,6 +308,7 @@ public static void main(String[] args) {
     // Method to add a process to the queue and map, while printing a "ready" message
     public static void addProcessToQueue(Process process, Queue<Thread> processQueue, 
                                         Map<Thread, Process> processMap) {
+        process.setLastQueuedTime(System.currentTimeMillis());
         // Create a new thread to run the process
         Thread thread = new Thread(process);
         
