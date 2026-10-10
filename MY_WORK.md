@@ -168,7 +168,7 @@
 
 ---
 
-### Entry 4 - [Date and Time]
+### Entry 4 - [oct 9, 2026 10:03 pm]
 **What I did**: Added fields and logic to track process waiting time.
 
 **Details**:- Added waiting time tracking fields (creationTime, lastQueuedTime, totalWaitingTime) to the Process class.
@@ -187,8 +187,8 @@
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [oct 10, 2026 11:29 am]
+**What I did**: Enhance SchedulerSimulation with process tracking
 
 **Details**:
 
