@@ -188,15 +188,15 @@
 ---
 
 ### Entry 5 - [oct 10, 2026 11:29 am]
-**What I did**: Enhance SchedulerSimulation with process tracking
+**What I did**: summaried SchedulerSimulation with process tracking in a table
 
-**Details**:
+**Details**: 
 
 **Challenges**:
 
 **Solution**:
 
-**Time spent**:
+**Time spent**: 15 minutes
 
 ---
 
