@@ -134,7 +134,7 @@
 
 **Details**: i went to line 150 &  edited the virtual id to mine
 
-**Challenges**: there is no challenges in this step
+**Challenges**: running the schedulerSimulateion java file on netBeans smoothly & try to understand the output and the target of the code
 
 **Solution**: the output of code contain my id when i running the program
 
