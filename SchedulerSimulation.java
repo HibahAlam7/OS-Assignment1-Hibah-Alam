@@ -1,9 +1,12 @@
 
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
+import java.util.List;
+import java.util.ArrayList;
 // ANSI Color Codes for enhanced terminal output
 class Colors {
     public static final String RESET = "\u001B[0m";
@@ -186,6 +189,7 @@ public static void main(String[] args) {
         
         // Map to associate each thread with its respective process object
         Map<Thread, Process> processMap = new HashMap<>();
+        List<Process> allProcesses = new ArrayList<>();
         
         // Print simulation header with elegant formatting
         System.out.println("\n" + Colors.BOLD + Colors.BRIGHT_CYAN + 
@@ -221,6 +225,7 @@ public static void main(String[] args) {
             
             // Create a new process object with a unique name, burst time, and the defined time quantum
             Process process = new Process("P" + i, burstTime, timeQuantum);
+            allProcesses.add(process);
             
             // Add the process to the ready queue and the map
             addProcessToQueue(process, processQueue, processMap);
@@ -302,6 +307,24 @@ public static void main(String[] args) {
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                           Colors.RESET + "\n");
         System.out.println(Colors.BRIGHT_YELLOW + "Total Context Switches: " + contextSwitchCount + Colors.RESET + "\n");
+        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "┌" + "─".repeat(79) + "┐" + Colors.RESET);
+        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "│" + Colors.BG_BLUE + Colors.BRIGHT_WHITE + Colors.BOLD + 
+                           "                         PERFORMANCE SUMMARY TABLE                            " + 
+                           Colors.RESET + Colors.BOLD + Colors.BRIGHT_CYAN + "│" + Colors.RESET);
+        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "├" + "─".repeat(79) + "┤" + Colors.RESET);
+        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "│" + Colors.YELLOW + 
+                           String.format(" %-15s │ %-18s │ %-18s │ %-18s ", "Process Name", "Burst Time (ms)", "Waiting Time (ms)", "Turnaround Time") + 
+                           Colors.BRIGHT_CYAN + "│" + Colors.RESET);
+        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "├" + "─".repeat(79) + "┤" + Colors.RESET);
+
+        for (Process p : allProcesses) {
+            long waitingTime = p.getTotalWaitingTime();
+            long turnaroundTime = waitingTime + p.getBurstTime();
+            System.out.println(Colors.BRIGHT_CYAN + "│" + Colors.RESET + 
+                               String.format(" %-15s │ %-18d │ %-18d │ %-18d ", p.getName(), p.getBurstTime(), waitingTime, turnaroundTime) + 
+                               Colors.BRIGHT_CYAN + "│" + Colors.RESET);
+        }
+        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "└" + "─".repeat(79) + "┘" + Colors.RESET + "\n");
     }
     
     // Method to add a process to the queue and map, while printing a "ready" message
