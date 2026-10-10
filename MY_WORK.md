@@ -179,11 +179,11 @@
 
              - Calculated and added waitDuration to total waiting time when polling processes from the queue in the main loop.
 
-**Challenges**: adding track without changing some details in original code was struggle, the code working with 
+**Challenges**: adding tracking without changing the original code was a challenge. Also, the Round Robin scheduling system made implementing cumulative waiting time more difficult
 
-**Solution**:
+**Solution**: each process has a hidden counter that count the time spent in ready queue and running even if the process repeating it's work because the Round Robin scheduling system, this information about time spent collected and saved in total waiting time so we can print it at the end. 
 
-**Time spent**:
+**Time spent**: around 25 minutes 
 
 ---
 
