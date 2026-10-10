@@ -169,11 +169,17 @@
 ---
 
 ### Entry 4 - [Date and Time]
-**What I did**:
+**What I did**: Added fields and logic to track process waiting time.
 
-**Details**:
+**Details**:- Added waiting time tracking fields (creationTime, lastQueuedTime, totalWaitingTime) to the Process class.
 
-**Challenges**:
+            - Created the corresponding getter and setter methods.
+
+            - Updated lastQueuedTime inside the addProcessToQueue method.
+
+             - Calculated and added waitDuration to total waiting time when polling processes from the queue in the main loop.
+
+**Challenges**: adding track without changing some details in original code was struggle, the code working with 
 
 **Solution**:
 
