@@ -251,7 +251,7 @@ Multithreading is a powerful technique used to increase system responsiveness by
 
 **Your Answer:** *(5-7 sentences)*
 
-The most challenging part of this assignment was adding the Cumulative Waiting Time feature to the code because it uses the Round Robin scheduling method for organizing processes, which makes calculating the waiting time and the running of each process with repetition is possible esbcelly when it’s must to not change any part of the original code.
+The most challenging part of this assignment was adding the Cumulative Waiting Time feature to the code because it uses the Round Robin scheduling method for organizing processes, which makes calculating the waiting time and the running of each process with repetition is possible esbcelly when it’s must to not change any part of the original code. Handling multiple queue entries and exits without breaking the base logic required careful tracking. We had to rely on timestamps using system methods to get accurate values. This constraint tested our problem-solving skills significantly. Ultimately, overcoming this hurdle helped us understand CPU scheduling much better.
 ## Question 3: How did you overcome the challenges you faced?
 
 > 💡 **TIP:** Describe your method: reading documentation, adding `System.out.println` to debug, re-reading the README, testing after each small change, asking for help.
