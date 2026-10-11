@@ -136,7 +136,7 @@
 
 **Challenges**: running the schedulerSimulateion java file on netBeans smoothly & try to understand the output and the target of the code
 
-**Solution**: the output of code contain my id when i running the program
+**Solution**:I downloaded the Java code in pc, then I opened it in NetBeans, and I decided to copy the code and paste it each time after modifying it.
 
 **Time spent**: 20 minutes
 
@@ -149,7 +149,7 @@
 
 **Challenges**: find the correct place to do each changes, rewrite the print sentence to new one with priority 
 
-**Solution**:Declared a priority attribute in the Process class constructor, initialized it with a random value between 1 and 10, and updated the queue print statements to display the priority value alongside the process details.
+**Solution**:
 
 **Time spent**: 30 minutes
 
