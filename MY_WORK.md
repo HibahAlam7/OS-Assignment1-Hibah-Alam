@@ -149,7 +149,9 @@
 
 **Challenges**: find the correct place to do each changes, rewrite the print sentence to new one with priority 
 
-**Solution**:
+**Solution**: Finding the correct place: We checked the code carefully and put the new lists and table printing in logical places—the list at the beginning and the table at the very end of the main method.
+Rewriting the print sentence with priority: We updated the print line inside the addProcessToQueue method to display the priority value clearly next to the process name and burst time.
+
 
 **Time spent**: 30 minutes
 
@@ -181,7 +183,9 @@
 
 **Challenges**: adding tracking without changing the original code was a challenge. Also, the Round Robin scheduling system made implementing cumulative waiting time more difficult
 
-**Solution**: each process has a hidden counter that count the time spent in ready queue and running even if the process repeating it's work because the Round Robin scheduling system, this information about time spent collected and saved in total waiting time so we can print it at the end. 
+**Solution**: I added new fields inside the Process class and saved processes in a separate list, so we didn't have to touch or change the instructor's original base code.
+I tracked the waiting time by calculating the time difference every time a process left the ready queue, and kept adding it up (accumulating it) as it went through multiple rounds.
+
 
 **Time spent**: around 25 minutes 
 
@@ -198,11 +202,13 @@ Counted the turnaround time by using the formula TAT = WT + burst time
 
 In the end, we enhanced the visual of the table by using color and measures to make it clearer.
 
+
 **Challenges**:voiding any modification to the instructor's original base code while still capturing process data.
 
 Keeping a separate reference to all processes because threads get removed from the queue during execution.
 
 Formatting the console text and spacing so the table columns look aligned and neat.
+
 
 **Solution**:Created a separate list (List<Process> allProcesses) right after the queue initialization to store all process instances safely during their creation.
 
@@ -233,13 +239,16 @@ Used String.format and box-drawing characters to print the summary table at the 
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: 2 hours
 
-**Most challenging part**:
+**Most challenging part**: Added fields and logic to track process waiting time
 
-**Most interesting learning**:
 
-**What I would do differently next time**:
+**Most interesting learning**: Using multithreaded methods and knowing the effect of each one on the code organization
+
+
+**What I would do differently next time**: Plan the data structures (like lists and tracking fields) from the very beginning before writing any code, to make adding new features easier.
+Use a more modular structure to separate the simulation logic from the terminal printing and table generation, keeping the code cleaner and more organized.
 
 ---
 
