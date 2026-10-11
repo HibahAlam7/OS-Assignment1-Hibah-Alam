@@ -326,7 +326,7 @@ It was helpful to understand the difference between multi-processor concepts and
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+In memory sharing, all threads share the same memory space, while each process has its own separate memory space. Communication between threads is faster because they share the same space, whereas processes need a mediator to communicate across different addresses. In our SchedulerSimulation.java code, the class named Process represents a simulated process, and it is executed by a real Java thread created via new Thread(process) inside the addProcessToQueue() method.
 
 ## Question 2: Ready Queue Behavior
 
@@ -338,15 +338,14 @@ It was helpful to understand the difference between multi-processor concepts and
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+In Round-Robin scheduling, if a process does not finish within its time quantum, it is paused and re-queued to wait for its next turn. This re-queuing mechanism ensures fairness by giving every process an equal share of the CPU and improving overall response time. Unlike the FIFO algorithm, which can cause starvation for late processes if long tasks run first, Round-Robin prevents anyone from being ignored. Similarly, it avoids the starvation of long tasks that happens in Shortest Job First when many smaller tasks arrive continuously
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
-```
+? P3 added to ready queue ? Burst time: 4842ms ? Priority: 7```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+In this snippet, process P3 has a large burst time that exceeds the time quantum, so after exhausting its quantum and yielding the CPU, it is added back to the ready queue via addProcessToQueue() to wait for subsequent rounds until it completes.
 
 ## Question 3: Thread Lifecycle
 
@@ -356,15 +355,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: P1 enters this state when it is instantiated and a thread is created using new Thread(process) inside the addProcessToQueue() method before execution starts.
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: P1 becomes runnable once the scheduler loop calls currentThread.start(), placing it in the thread scheduler's ready pool.
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: P1 is running when the CPU actively executes its code inside the run() method during its allocated time quantum.
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: P1's thread execution pauses or sleeps using Thread.sleep() inside the run() method progress steps, while the main thread waits using currentThread.join().
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: P1 is terminated when its remaining time reaches zero (isFinished() returns true) and its run() method finishes execution completely.
 
 ## Question 4: Real-World Applications
 
@@ -374,32 +373,32 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): CPU Multitasking in Operating Systems
 
 **Description**:
-[Describe the real-world scenario.]
+Modern operating systems use Round-Robin scheduling to share CPU time among multiple running user applications and background programs. Each active program or thread gets a fixed time quantum before the OS performs a context switch to the next one.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+This approach fits perfectly because it guarantees absolute fairness, preventing any single heavy process from monopolizing the processor. It also ensures high responsiveness, allowing users to interact smoothly with multiple programs at the same time.
 
-### Example 2: [Name of application/scenario]
+### Example 2:Multi-threaded Web Server Request Handler
 
 **Description**:
-[Describe the real-world scenario or application.]
+A multi-threaded web server handles concurrent client requests by allocating processing time cycles sequentially to incoming connection threads. Instead of processing one massive file transfer or heavy query completely before starting the next, the server divides processing slices among active requests.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin is ideal here because it provides great predictability and prevents request starvation. Even if one client sends a very large request, other users still get fair, timely access to the server resources without experiencing long freezes.
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1. How the Round-Robin scheduling algorithm manages processes using time quantums and re-queuing
+2. The differences between simulated Java processes/threads and real operating system threads.
+3. How to track performance metrics like waiting time and turnaround time without altering the base code.
 
 **Concepts I need to study more:**
-1.
-2.
+1. Advanced context switching overhead and its impact on CPU performance.
+2. Thread lifecycle states and synchronization details.
 
 ---
 
