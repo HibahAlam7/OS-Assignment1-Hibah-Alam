@@ -194,7 +194,9 @@
 
 **Challenges**:
 
-**Solution**:
+**Solution**:A neat performance summary table prints at the very end of the simulation.
+
+It clearly displays the Process Name, Burst Time, Waiting Time, and Turnaround Time for every process.
 
 **Time spent**: 15 minutes
 
