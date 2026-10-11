@@ -257,8 +257,7 @@ The most challenging part of this assignment was adding the Cumulative Waiting T
 > 💡 **TIP:** Describe your method: reading documentation, adding `System.out.println` to debug, re-reading the README, testing after each small change, asking for help.
 
 **Your Answer:** *(5-7 sentences)*
-
-[Write your answer here.]
+To overcome these challenges, I started by thoroughly analyzing the existing codebase to understand its structure without altering the original logic. I broke down the problem into smaller, manageable steps, such as creating dedicated fields in the Process class and implementing precise timestamp tracking using System.currentTimeMillis(). Instead of modifying the core base code, I added complementary logic like a separate list to track all process instances for the final summary. I tested each component incrementally after every small change to catch bugs early and ensure everything worked smoothly. Finally, I structured the output cleanly using formatted strings and console text formatting to display the performance summary table at the end of the simulation.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -270,15 +269,15 @@ Multithreading is essential in real-world applications to ensure responsiveness 
 
 ### Optional: What would you like to learn more about?
 
-[Any topics related to threading or operating systems that you're curious about?]
-
+How can we use the multi-threaded concept in different applications, and how can we apply this concept in other programming languages
 ### Optional: How confident do you feel about multithreading concepts now?
 
-[Beginner / Intermediate / Confident. What do you understand well? What needs more practice?]
+Confident, I understood the concept of multithreading in Java, but I think I need more practice to decide which part can work concurrently to apply this concept effectively
+
 
 ### Optional: Feedback on the assignment
 
-[Any comments? Was it helpful? Too easy or hard? Suggestions?]
+It was helpful to understand the difference between multi-processor concepts and multi-threaded concepts.
 
 ---
 
