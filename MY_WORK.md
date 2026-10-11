@@ -194,6 +194,7 @@ I tracked the waiting time by calculating the time difference every time a proce
 ### Entry 5 - [oct 10, 2026 11:29 am]
 **What I did**: summaried SchedulerSimulation with process tracking in a table
 
+
 **Details**: I made an ArrayList in the main class to store each created process. 
 
 Added each process to the list using the llProcesses.add(process) method
@@ -203,11 +204,13 @@ Counted the turnaround time by using the formula TAT = WT + burst time
 In the end, we enhanced the visual of the table by using color and measures to make it clearer.
 
 
+
 **Challenges**:voiding any modification to the instructor's original base code while still capturing process data.
 
 Keeping a separate reference to all processes because threads get removed from the queue during execution.
 
 Formatting the console text and spacing so the table columns look aligned and neat.
+
 
 
 **Solution**:Created a separate list (List<Process> allProcesses) right after the queue initialization to store all process instances safely during their creation.
@@ -217,6 +220,7 @@ Added each newly created process to this list in the loop before it entered the 
 Calculated the Turnaround Time dynamically at the end by combining the accumulated waiting time with the initial burst time.
 
 Used String.format and box-drawing characters to print the summary table at the very end of the program, completely avoiding any changes to the original base code logic.
+
 
 **Time spent**: 15 minutes
 
