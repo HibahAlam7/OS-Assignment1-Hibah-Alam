@@ -33,7 +33,7 @@
 | **Student ID** | 446052687 |
 | **University Email** | 446052687@std.psau.edu.sa |
 | **GitHub Username** | HibahAlam7 |
-| **Repository Link** | [Paste your repository link here] |
+| **Repository Link** | https://github.com/HibahAlam7/OS-Assignment1-Hibah-Alam|
  
 ---
 
